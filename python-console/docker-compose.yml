@@ -1,0 +1,9 @@
+version: "3.10"
+
+services:
+  mosquitto:
+    image: python:3.12-rc-bullseye
+    network_mode: host
+    expose:
+      - "4200:8080"
+    command: ["shellinabox", "-t", "-s", "/usr/bin/python3"]
